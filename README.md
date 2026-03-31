@@ -1,3 +1,9 @@
+## 🌐 Live Demo
+
+🔗 https://samarth-swami.github.io/fsm-visualizer/
+
+---
+
 # FSM Visualizer
 
 A web-based Finite State Machine (FSM) visualizer built using **HTML, CSS, and JavaScript**.
