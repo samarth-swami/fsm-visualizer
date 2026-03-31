@@ -1,38 +1,110 @@
-# Finite State Machine Simulator
+# FSM Visualizer
 
-A finite state machine simulator built using Javascript
+A web-based Finite State Machine (FSM) visualizer built using **HTML, CSS, and JavaScript**.
 
+---
 
-## Problem Statement
+## 🚀 Overview
 
-The problem statement is originally from [here](https://flaviocopes.com/finite-state-machines/#:~:text=Our%20real%20world%20scenario%20is,the%20l1%20light%20turns%20on.)
+This project simulates a real-world lighting system using a **Finite State Machine (FSM)**.  
+It demonstrates how inputs trigger transitions between states and produce corresponding outputs.
 
+---
 
-<img src="https://flaviocopes.com/finite-state-machines/lights.jpg" alt="alt text" width="500" height="400">
+## 🎯 Features
 
--   Our real world scenario is this: we have a house, with one door, 2 buttons and 3 lights.
--   At the default state the lights are all turned off.
--   When you enter the house, you can press one of the 2 push buttons you have, p1 or p2. When you press any of those buttons, the l1 light turns on.
--   Imagine this is the entrance light, and you can take your jacket off. Once you are done, you decide which room you want to go into (kitchen or bedroom, for example).
--   If you press the button p1, l1 turns off and l2 turns on. Instead if you press the button p2, l1 turns off and l3 turns on.
--   Pressing another time any of the 2 buttons, p1 or p2, the light that is currently on will turn off, and we’ll get back at the initial state of the system.
+- Interactive FSM simulation  
+- Real-time state updates  
+- Visual representation using lights  
+- Reset functionality  
+- Transition Table (theoretical representation)  
+- FSM State Diagram  
 
-## Solution
+---
 
-![output gif](./images/outputdemo.gif)
+## 🧠 FSM Model
 
-Check out the live demo [here](https://fsm-simulator-app.netlify.app/)
--   The output is dependent on the current state and the present input, thus, the given FSM is a **MEALY MACHINE**
--   The states are: OFF, L1_ON, L2_ON, L3_ON (00,01,10,11)
--   The inputs are: P1, P2 (0, 1 )
+This project is based on a **Mealy Machine**, where:
 
+- Output depends on **current state + input**
+- States represent lighting conditions  
+- Inputs represent button presses (P1, P2)
 
-## Transition Table
+---
 
-![transition table](./images/transitiontable.png)
+## 🔄 States
 
+- **IDLE** → All lights OFF  
+- **ENTRANCE_ON** → Entrance light ON  
+- **KITCHEN_ON** → Kitchen light ON  
+- **BEDROOM_ON** → Bedroom light ON  
 
-## 
+---
 
-### This mealy machine is simulated in this project using JavaScript. 
-### [Live Demo](https://fsm-simulator-app.netlify.app/)
+## 🎮 Inputs
+
+- **P1**
+- **P2**
+- **RESET**
+
+---
+
+## 📊 Transition Table
+
+![Transition Table](transition-table.png)
+
+---
+
+## 🔁 State Transition Diagram
+
+![FSM Diagram](fsm-diagram.png)
+
+---
+
+## ⚙️ Tech Stack
+
+- HTML5  
+- CSS3  
+- JavaScript  
+
+---
+
+## 📂 Project Structure
+
+fsm-visualizer/
+│── index.html
+│── styles.css
+│── app.js
+│── images/
+│── transition-table.png
+│── fsm-diagram.png
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository  
+
+git clone https://github.com/samarth-swami/fsm-visualizer.git
+
+---
+
+## 🎯 Future Improvements
+
+- FSM → Circuit conversion  
+- Support for Moore Machines  
+- Graph-based FSM editor  
+- Export FSM as JSON  
+
+---
+
+## 👨‍💻 Author
+
+**Samarth Swami**  
+GSoC 2026 Aspirant | CircuitVerse Contributor  
+
+---
+
+## ⭐ Motivation
+
+This project is built as part of my preparation for **Google Summer of Code 2026**, focusing on contributing to **CircuitVerse** and understanding FSM-based circuit synthesis.

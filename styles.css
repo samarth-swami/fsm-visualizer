@@ -1,97 +1,126 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 
 :root{
-    --primary-color:#4B5563;
-    --dark-gray:#6B7280;
-    --offwhite: #d7f3fa;
-    --light-blue:#EFF6FF;
+    --primary:#0f172a;
+    --secondary:#1e293b;
+    --accent:#38bdf8;
+    --bg:#f1f5f9;
 }
 
 body{
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Ubuntu', sans-serif; 
-    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #e0f2fe, #f8fafc);
 }
 
-.container{
-    
-    width:90%;
-    max-width:900px;
-    margin: 0 auto;
-    border: 2px solid black;
-    margin-top:80px;
-}
-
-.row{  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom:2rem;
-}
-
-.room3{
-    margin: 0 auto;
-    margin-bottom: 0;
-    
-}
-
-.room1{
-    border-right: 2px solid black;
-    padding-right: 7rem;
-}
-
-.input_button{
-    text-decoration: none;
-    padding: 0.5rem 2.5rem ;
-    margin-top:1rem;
-    margin-left:0.5rem;
-    box-sizing:border-box;
-    font-size: 1.5rem;
-    
-    background-color: var(--primary-color);
-    border-radius: 0.5rem;
-    color:white;
-
-    cursor: pointer;
-}
-
-/* navigation */
+/* 🔷 NAVBAR */
 .navigation{
-    background-color: var(--primary-color);
-    padding: 1.25rem;
-    border-bottom-left-radius: 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 1rem;
+    text-align: center;
 }
 
 .nav-brand{
-    color:white;
-}
-.navigation .nav-brand{
+    color: white;
+    font-size: 1.5rem;
     font-weight: bold;
-    font-size: 1.1rem;
 }
 
-.text{
-    font-size: 1.25rem;
-    font-weight: bold; 
+/* 🔷 MAIN CARD */
+.container{
+    width:90%;
+    max-width:900px;
+    margin: 40px auto;
+    padding: 20px;
+
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-.text1{
-    font-size: 1rem; 
+
+/* 🔷 STATE BOX */
+.state-box{
+    text-align: center;
+    background: #e0f2fe;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-@media (max-width:675px){
-    .room1{
-        border:none;
-        margin-left:0.5rem;
-    }
+/* 🔷 SECTION TITLE */
+.section-title{
+    text-align: center;
+    margin: 20px 0 10px;
+    color: var(--secondary);
+}
 
-    .text{
-        font-size: 1rem;
-        margin-left:0.5rem;
-    }
+/* 🔷 ROW */
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
 
-    .text1{
-        font-size: 0.98rem;
-        margin-left:0.5rem;
-    }
+/* 🔷 ROOM CARD */
+.room-card{
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8fafc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.room-card:hover{
+    transform: scale(1.05);
+}
+
+/* 🔷 IMAGES */
+img{
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+/* 🔷 BUTTONS */
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.reset{
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.fsm-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.fsm-table th, .fsm-table td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.fsm-table th{
+    background-color: #0f172a;
+    color: white;
+}
+
+.fsm-table tr:nth-child(even){
+    background-color: #f1f5f9;
 }

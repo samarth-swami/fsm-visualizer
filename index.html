@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSM Simulator</title>
+    <title>FSM Visualizer | Samarth Swami</title>
     <link rel="stylesheet" href="./styles.css">
-    
+
 </head>
 
 <body>
-    <nav class="navigation ">
-        <div class="nav-brand"> lightHomeFSM</div>
+    <!-- 🔷 NAVBAR -->
+    <nav class="navigation">
+        <div class="nav-brand">FSM Visualizer - Samarth Swami</div>
     </nav>
+
+    <!-- 🔷 MAIN CARD -->
     <div class="container">
+
+        <!-- 🔷 STATE DISPLAY -->
+        <h3 id="stateDisplay" class="state-box">Current State: IDLE</h3>
+
+        <!-- 🔷 ROOMS -->
+        <h4 class="section-title">Rooms</h4>
+
         <div class="row">
-            <div class="room1">
-                
-                
-                <img src="./images/off.gif" alt="" id="l2">
-                
-                <span class="text1"><span class="text">l2 </span> kitchen</span>
+            <div class="room-card">
+                <img src="./images/off.gif" id="l2">
+                <p><strong>L2</strong> Kitchen</p>
             </div>
-            <div class="room2">
-                
-                <img src="./images/off.gif" alt="" id="l3">
-                
-                <span class="text1"><span class="text">l3 </span> bedroom</span>
+
+            <div class="room-card">
+                <img src="./images/off.gif" id="l3">
+                <p><strong>L3</strong> Bedroom</p>
             </div>
         </div>
+
         <div class="row">
-            <div class="room3">
-                <span class="text">l1</span>
-                <img id="l1" src="./images/off.gif" alt="" >
-                <span class="text1">entrance</span>
+            <div class="room-card">
+                <img src="./images/off.gif" id="l1">
+                <p><strong>L1</strong> Entrance</p>
             </div>
         </div>
+
+        <!-- 🔷 CONTROLS -->
+        <h4 class="section-title">Controls</h4>
+
         <div class="row">
-            <div class="room">
-                <div onclick="onP1()" class="input_button">P1</div>
-            </div>
-            <div class="room">
-                <div onclick="onP2()" class="input_button">P2</div>
-            </div>
+            <button onclick="onP1()" class="btn">P1</button>
+            <button onclick="onP2()" class="btn">P2</button>
+            <button onclick="resetFSM()" class="btn reset">RESET</button>
         </div>
+
+        <h4 class="section-title">Transition Table</h4>
+
+<table class="fsm-table">
+  <tr>
+    <th>Present</th>
+    <th>P1 → State</th>
+    <th>Output</th>
+    <th>P2 → State</th>
+    <th>Output</th>
+  </tr>
+
+  <tr>
+    <td>IDLE</td>
+    <td>ENTRANCE_ON</td>
+    <td>01</td>
+    <td>ENTRANCE_ON</td>
+    <td>01</td>
+  </tr>
+
+  <tr>
+    <td>ENTRANCE_ON</td>
+    <td>KITCHEN_ON</td>
+    <td>10</td>
+    <td>BEDROOM_ON</td>
+    <td>11</td>
+  </tr>
+
+  <tr>
+    <td>KITCHEN_ON</td>
+    <td>IDLE</td>
+    <td>00</td>
+    <td>IDLE</td>
+    <td>00</td>
+  </tr>
+
+  <tr>
+    <td>BEDROOM_ON</td>
+    <td>IDLE</td>
+    <td>00</td>
+    <td>IDLE</td>
+    <td>00</td>
+  </tr>
+</table>
+
     </div>
 
     <script src="./app.js"></script>
