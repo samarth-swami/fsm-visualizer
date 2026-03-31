@@ -51,13 +51,13 @@ This project is based on a **Mealy Machine**, where:
 
 ## 📊 Transition Table
 
-![Transition Table](transition-table.png)
+![Transition Table](./images/transition-table.png)
 
 ---
 
 ## 🔁 State Transition Diagram
 
-![FSM Diagram](fsm-diagram.png)
+![FSM Diagram](./images/fsm-diagram.png)
 
 ---
 
