@@ -1,6 +1,6 @@
 ## 🌐 Live Demo
 
-🔗 https://samarth-swami.github.io/fsm-visualizer/
+🔗 https://fsm-visualizer-ten.vercel.app/
 
 ---
 
